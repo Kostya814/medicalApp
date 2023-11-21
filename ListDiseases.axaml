@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:MedicalApp.Models"
+        mc:Ignorable="d" Width="400" Height="450"
+        x:Class="MedicalApp.ListDiseases"
+        CanResize="False"
+        Title="ListDiseases">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Offset="0.0" Color="#142850"/>
+            <GradientStop Offset="1.0" Color="#27496D"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <ListBox Name="listbox">
+        <ListBox.Background>
+            <LinearGradientBrush>
+                <GradientStop Offset="0.0" Color="#142850"/>
+                <GradientStop Offset="1.0" Color="#27496D"/>
+            </LinearGradientBrush>
+        </ListBox.Background>
+        <ListBox.DataTemplates>
+            <DataTemplate x:DataType="models:Treatments">
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <TextBlock 
+                            Text="{Binding DiseasesName}"/>
+                        <TextBlock 
+                            Text="{Binding Typediseases}"
+                            Margin="10,0,0,0"/>
+                    </StackPanel>
+            </DataTemplate>
+        </ListBox.DataTemplates>
+    </ListBox>
+</Window>

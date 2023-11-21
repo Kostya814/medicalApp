@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:MedicalApp.Models"
+        mc:Ignorable="d" Width="500" Height="450"
+        x:Class="MedicalApp.AddAppointments"
+        Title="AddAppointments">
+     <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Offset="0.0" Color="#142850"/>
+            <GradientStop Offset="1.0" Color="#27496D"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <StackPanel
+        Orientation="Vertical"
+        >
+        <StackPanel 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            Spacing="10">
+            <TextBlock 
+                Text="Выберите дату:"/>
+            <DatePicker
+                Name="Date"
+                Margin="0,0,0,10"/>
+            <TextBlock 
+                Text="Выберите время:"/>
+            <TimePicker
+                Name="Time"
+                Margin="0,0,0,10"/>
+        </StackPanel>
+        <StackPanel 
+            Orientation="Horizontal"
+            HorizontalAlignment="Center">
+            <TextBlock Text="Выберите доктора"/>
+            <ComboBox 
+                Name="CbDoctors"
+                Margin="10,0,0,0">
+                <ComboBox.DataTemplates>
+                    <DataTemplate x:DataType="models:Employee">
+                        <TextBlock Text="{Binding DisplayInfo}"/>
+                    </DataTemplate>
+                </ComboBox.DataTemplates>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel 
+            HorizontalAlignment="Center"
+            Margin="0,40,0,0"
+            Orientation="Horizontal">
+            <TextBlock Text="Выберите болезнь"/>
+            <ComboBox
+                Margin="10,0,0,0"
+                Name="CbDiseases">
+                <ComboBox.DataTemplates>
+                    <DataTemplate x:DataType="models:Diseases">
+                        <TextBlock Text="{Binding NameDiseases}"/>
+                    </DataTemplate>
+                </ComboBox.DataTemplates>
+            </ComboBox>
+        </StackPanel>
+        <Button 
+            Margin="0,30,0,0"
+            Content="Добавить запись"
+            HorizontalAlignment="Center"
+            Click="Insert"/>
+    </StackPanel>
+</Window>

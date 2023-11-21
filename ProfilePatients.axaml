@@ -1,0 +1,109 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:MedicalApp.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MedicalApp.ProfilePatients"
+        Title="ProfilePatients"
+        Width="815" Height="450"
+        CanResize="False">
+        <Window.Background>
+                <LinearGradientBrush>
+                        <GradientStop Offset="0.0" Color="#142850"/>
+                        <GradientStop Offset="1.0" Color="#27496D"/>
+                </LinearGradientBrush>
+        </Window.Background>
+        <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                        <Menu>
+                                <MenuItem Header="Профиль">
+                                        <MenuItem 
+                                                Header="Выйти из аккаунта"
+                                                Click="LogOut"/>
+                                </MenuItem>
+                        </Menu>
+                        <TextBlock
+                                Name="TbPatients"
+                                Text="Пациент: "
+                                Margin="30,10,0,0"/>
+                </StackPanel>
+                <DockPanel>
+                        <TextBlock 
+                                DockPanel.Dock="Left"
+                                Margin="10,20,0,0"
+                                Text="Назначение для пациентов: "/>
+                        <Button 
+                                Margin="300,0,0,0"
+                                Content="Записаться к доктору"
+                                Click="Click"/>
+                </DockPanel>
+                
+                <ListBox 
+                    Name="ListAppointments" 
+                    Margin="20,10,20,20"
+                    MaxHeight="350"
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="10">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="models:Appointments">
+                                <Border
+                                        BorderBrush="Gray"
+                                        BorderThickness="1"
+                                        CornerRadius="10">
+                                        <StackPanel 
+                                                Orientation="Horizontal">
+                                                <StackPanel 
+                                                        Margin="5,0,0,0"
+                                                        Orientation="Vertical">
+                                                        <TextBlock 
+                                                                Text="Доктор"/>
+                                                        <TextBlock 
+                                                                Margin="0,10,0,0"
+                                                                VerticalAlignment="Center"
+                                                                Text="{Binding InfoDoctor}"/>
+                                                </StackPanel>
+                                                <StackPanel 
+                                                        Margin="10,0,0,0"
+                                                        Orientation="Vertical">
+                                                        <TextBlock 
+                                                                Text="Посещаемость"/>
+                                                        <CheckBox
+                                                                Margin="0,2,0,0"
+                                                                VerticalAlignment="Center"
+                                                                IsChecked="{Binding Attendance}"
+                                                                Content="Посетил" 
+                                                                IsEnabled="False"/>
+                                                </StackPanel>
+                                                <StackPanel 
+                                                        Margin="10,0,0,0"
+                                                        Orientation="Vertical">
+                                                        <TextBlock 
+                                                                Text="Дата назначения"/>
+                                                        <TextBlock
+                                                                Margin="0,10,0,0"
+                                                                VerticalAlignment="Center"
+                                                                Text="{Binding AppointmentDate}"
+                                                                />
+                                                </StackPanel>
+                                                <StackPanel 
+                                                        Margin="10,0,0,0"
+                                                        Orientation="Vertical">
+                                                        <TextBlock 
+                                                                Text="Заболевание"/>
+                                                        <TextBlock 
+                                                                Margin="0,10,0,0"
+                                                                VerticalAlignment="Center"
+                                                                Text="{Binding Diseases}"
+                                                                />
+                                                </StackPanel>
+                                                
+                                                
+                                        </StackPanel>
+                                </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+        </StackPanel>
+</Window>
