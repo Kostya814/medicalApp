@@ -2,9 +2,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" Width="400" Height="300"
+        mc:Ignorable="d" Width="420" Height="300"
         x:Class="MedicalApp.PayWindow"
-        Title="PayWindow"
+        Title="Окно оплаты"
         CanResize="False">
     <Window.Background>
         <LinearGradientBrush>
@@ -19,38 +19,49 @@
                 <TextBlock Text="Введите реквизиты карты" FontSize="18" Margin="0 0 0 10"/>
             
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                    <TextBlock Text="Номер карты:" Width="100"/>
+                    <TextBlock Text="Номер карты:" Width="120"/>
                     <MaskedTextBox
                         Margin="20,0,0,0"
                         Name="cardNumberTextBox" Width="250" MaxLength="16" Mask="0000-0000-0000-0000"/>
                 </StackPanel>
             
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                    <TextBlock Text="Имя владельца:" Width="100"/>
+                    <TextBlock Text="Имя владельца:" Width="120"/>
                     <MaskedTextBox Margin="20,0,0,0" Name="cardHolderTextBox" Width="250"/>
                 </StackPanel>
             
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                    <TextBlock Text="Срок действия (ММ/ГГ):" Width="100"/>
-                    <MaskedTextBox Margin="20,0,0,0" Name="expiryDateTextBox" Width="100" MaxLength="4" Mask="00/00" />
+                    <TextBlock Text="Срок действия (ММ/ГГ):" Width="200"/>
+                    <MaskedTextBox Margin="20,0,0,0" Name="expiryDateTextBox" Width="50" MaxLength="4" Mask="00/00" />
                 </StackPanel>
             
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="CVV код:" Width="100"/>
-                    <TextBox Name="cvvTextBox" Width="50" MaxLength="3" />
+                    <TextBlock Text="CVV код:" Width="200"/>
+                    <TextBox 
+                        Margin="20,0,0,0"
+                        Name="cvvTextBox" 
+                        Width="50" 
+                        MaxLength="3" />
                 </StackPanel>
             </StackPanel>
         </Grid>
         <StackPanel 
-            Orientation="Horizontal">
-            <Button
-                Content="Подтвердить оплату"
-                Click="Pay"
+            Orientation="Vertical">
+            <StackPanel 
+                Orientation="Horizontal">
+                <Button
+                    Margin="10"
+                    Content="Подтвердить оплату"
+                    Click="Pay"
                 ></Button>
-            <Button
-                Content="Отмена оплаты"
-                Click="Cancel"
-            ></Button>
+                <Button
+                    Margin="10"
+                    Content="Отмена оплаты"
+                    Click="Cancel"
+                ></Button>
+            </StackPanel>
+            <TextBlock 
+                Margin="5">К оплате 500 р.</TextBlock>
         </StackPanel>
     </StackPanel>
 </Window>

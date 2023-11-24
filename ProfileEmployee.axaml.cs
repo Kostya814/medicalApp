@@ -31,7 +31,7 @@ public partial class ProfileEmployee : Window
         tbEmployee.Text += emp;
         Update();
         DispatcherTimer timer = new DispatcherTimer();
-        timer.Interval = TimeSpan.FromSeconds(1);
+        timer.Interval = TimeSpan.FromSeconds(3);
         timer.Tick += Timer_Tick;
         timer.Start();
     }

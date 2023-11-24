@@ -25,7 +25,7 @@ public partial class ProfilePatients : Window
         TbPatients.Text+=_patients.FirstName +" "+ _patients.SecondName+ " " + _patients.LastName;
         Update();
         DispatcherTimer timer = new DispatcherTimer();
-        timer.Interval = TimeSpan.FromSeconds(1);
+        timer.Interval = TimeSpan.FromSeconds(3);
         timer.Tick += Timer_Tick;
         timer.Start();
     
