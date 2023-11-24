@@ -131,3 +131,10 @@ C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\obj\Debug\net7.0\MedicalApp.
 C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\obj\Debug\net7.0\ref\MedicalApp.dll
 C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\MySqlConnector.dll
+C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\obj\Debug\net7.0\MedicalApp.sourcelink.json
+C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\Gat.Controls.MessageBox.dll
+C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\ColorTextBlock.Avalonia.dll
+C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\DialogHost.Avalonia.dll
+C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\Markdown.Avalonia.dll
+C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\MsBox.Avalonia.dll
+C:\Users\Kostya\RiderProjects\MedicalApp\MedicalApp\bin\Debug\net7.0\System.Reactive.dll

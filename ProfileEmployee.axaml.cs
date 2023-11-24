@@ -24,7 +24,10 @@ public partial class ProfileEmployee : Window
     {
         InitializeComponent();
         _employee = employee;
-        string emp = employee.FirstName +" "+ employee.SecondName+ " " + employee.LastName+ " | " + employee.PositionName;
+        string emp = employee.FirstName +" "+ 
+                     employee.SecondName+ " " + 
+                     employee.LastName+ " | " + 
+                     employee.PositionName;
         tbEmployee.Text += emp;
         Update();
         DispatcherTimer timer = new DispatcherTimer();

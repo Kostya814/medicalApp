@@ -6,7 +6,9 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
+using Gat.Controls;
 using MedicalApp.Models;
+using MsBox.Avalonia;
 using MySqlConnector;
 
 namespace MedicalApp;
@@ -83,5 +85,17 @@ public partial class ProfilePatients : Window
     private void Click(object? sender, RoutedEventArgs e)
     {
         new AddAppointments(_patients).Show();
+    }
+
+    private void Pay(object? sender, RoutedEventArgs e)
+    {
+        var appoint = ListAppointments.SelectedItem as Appointments;
+        var box = MessageBoxManager.GetMessageBoxStandard("Ошибка оплаты", "Выберите назначение!");
+        if (appoint == null)
+        {
+            box.ShowAsync();
+            return;
+        }
+        new PayWindow(ListAppointments.SelectedItem as Appointments).Show();
     }
 }

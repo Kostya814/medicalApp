@@ -3,10 +3,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:models="clr-namespace:MedicalApp.Models"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" 
         x:Class="MedicalApp.ProfilePatients"
         Title="ProfilePatients"
-        Width="815" Height="450"
+        Width="850" Height="450"
         CanResize="False">
         <Window.Background>
                 <LinearGradientBrush>
@@ -28,16 +28,20 @@
                                 Text="Пациент: "
                                 Margin="30,10,0,0"/>
                 </StackPanel>
-                <DockPanel>
+                <StackPanel 
+                        Orientation="Horizontal">
                         <TextBlock 
-                                DockPanel.Dock="Left"
                                 Margin="10,20,0,0"
                                 Text="Назначение для пациентов: "/>
                         <Button 
-                                Margin="300,0,0,0"
+                                Margin="100,0,0,0"
                                 Content="Записаться к доктору"
                                 Click="Click"/>
-                </DockPanel>
+                        <Button 
+                                Margin="100,0,0,0"
+                                Content="Оплата назначения"
+                                Click="Pay"/>
+                </StackPanel>
                 
                 <ListBox 
                     Name="ListAppointments" 
@@ -98,8 +102,6 @@
                                                                 Text="{Binding Diseases}"
                                                                 />
                                                 </StackPanel>
-                                                
-                                                
                                         </StackPanel>
                                 </Border>
                         </DataTemplate>

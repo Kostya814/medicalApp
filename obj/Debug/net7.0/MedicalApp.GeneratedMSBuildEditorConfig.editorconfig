@@ -29,6 +29,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/Kostya/RiderProjects/MedicalApp/MedicalApp/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Kostya/RiderProjects/MedicalApp/MedicalApp/PayWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Kostya/RiderProjects/MedicalApp/MedicalApp/ProfileEmployee.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
