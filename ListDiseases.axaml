@@ -6,7 +6,7 @@
         mc:Ignorable="d" Width="400" Height="450"
         x:Class="MedicalApp.ListDiseases"
         CanResize="False"
-        Title="ListDiseases">
+        Title="Список болезней">
     <Window.Background>
         <LinearGradientBrush>
             <GradientStop Offset="0.0" Color="#142850"/>

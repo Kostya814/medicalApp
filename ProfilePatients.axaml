@@ -5,7 +5,7 @@
         xmlns:models="clr-namespace:MedicalApp.Models"
         mc:Ignorable="d" 
         x:Class="MedicalApp.ProfilePatients"
-        Title="ProfilePatients"
+        Title="Профиль"
         Width="850" Height="450"
         CanResize="False">
         <Window.Background>

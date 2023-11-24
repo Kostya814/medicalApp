@@ -3,9 +3,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:models="clr-namespace:MedicalApp.Models"
-        mc:Ignorable="d" Width="500" Height="450"
+        mc:Ignorable="d" Width="400" Height="350"
         x:Class="MedicalApp.AddAppointments"
-        Title="AddAppointments">
+        Title="Окно записи">
      <Window.Background>
         <LinearGradientBrush>
             <GradientStop Offset="0.0" Color="#142850"/>
@@ -14,6 +14,7 @@
     </Window.Background>
     <StackPanel
         Orientation="Vertical"
+        Margin="20"
         >
         <StackPanel 
             HorizontalAlignment="Center" 
